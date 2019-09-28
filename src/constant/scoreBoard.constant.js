@@ -1,0 +1,11 @@
+export const scorePoints = [0, 15, 30, 40];
+export const playerA_InitialScore = 0;
+export const playerB_InitialScore = 0;
+export const PlayerA_FirstPoint = 15;
+export const playerB_FirstPoint = 15;
+export const playerA_SecondPoint = 30;
+export const playerB_SecondPoint = 30;
+export const playerA_ThirdPoint = 40;
+export const playerB_ThirdPoint = 40;
+export const Deuce = 'deuce';
+export const Love = 'love';
