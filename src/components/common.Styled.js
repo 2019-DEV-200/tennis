@@ -1,5 +1,4 @@
-import styled, { css } from 'styled-components';
-import { em } from 'polished';
+import styled from 'styled-components';
 import { FontFamily } from '../common/Fonts';
 
 export const Wrapper = styled.div`max-width: 100;`;

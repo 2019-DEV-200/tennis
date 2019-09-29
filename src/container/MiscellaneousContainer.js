@@ -1,6 +1,5 @@
 import React from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
-import { page_Title, player_A, player_B } from '../constant/scoreBoard.constant';
+import { injectIntl } from 'react-intl';
 import ScoreBoardComponent from '../components/scoreBoardComponent';
 import MatchUpdateComponent from '../components/matchUpdateComponent';
 import { MainContainer, PlayerA, PlayerB } from './miscellaneous.Styled';
@@ -19,12 +18,11 @@ class MiscellaneousContainer extends React.Component {
 	}
 
 	componentDidMount() {
-		document.title = this.props.intl.formatMessage({ id: page_Title });
+		document.title = 'Welcome to the Kata Tennis Page';
 	}
 
 	playerAHitsStroke(numberofAHits) {
 		const { playerAScore, playerBScore, numberABtnClick, numberBBtnClick, gameOver } = this.state;
-		console.log('value of gameover', gameOver);
 		if (!gameOver) {
 			if (numberofAHits === 1) {
 				this.setState({ playerAScore: 15 });
@@ -33,14 +31,13 @@ class MiscellaneousContainer extends React.Component {
 			} else if (numberofAHits === 3) {
 				this.setState({ playerAScore: 40 });
 			}
-			//this.CheckGameStatusUI(playerAScore, playerBScore, numberABtnClick, numberBBtnClick);
+			this.CheckGameStatusUI(playerAScore, playerBScore, numberABtnClick, numberBBtnClick);
 			this.setState({ numberABtnClick: this.state.numberABtnClick + 1 });
 		}
 	}
 
 	playerBHitsStroke(numberofBHits) {
 		const { playerAScore, playerBScore, numberABtnClick, numberBBtnClick, gameOver } = this.state;
-		console.log('value of gameover', gameOver);
 		if (!gameOver) {
 			if (numberofBHits === 1) {
 				this.setState({ playerBScore: 15 });
@@ -63,25 +60,24 @@ class MiscellaneousContainer extends React.Component {
 
 	render() {
 		const { playerAScore, playerBScore, numberABtnClick, numberBBtnClick, gameOver } = this.state;
-		console.log('Game over value is ', gameOver);
 		return (
 			<React.Fragment>
 				<MainContainer>
 					<ScoreBoardComponent playerAScore={playerAScore} playerBScore={playerBScore} />
-			
+
 					<PlayerA
-						label={this.props.intl.formatMessage({ id: player_A })}
+						label="Player A"
 						className={`redBtn`}
 						onClick={() => this.playerAHitsStroke(numberABtnClick)}
-						disabled={gameOver}
+						//disabled={gameOver}
 					/>
 					<PlayerB
-						label={this.props.intl.formatMessage({ id: player_B })}
-						className={`redBtn`}
+						label="Player B"
+						className={`greenBtn`}
 						onClick={() => this.playerBHitsStroke(numberBBtnClick)}
-						disabled={gameOver}
+						//disabled={gameOver}
 					/>
-          		<MatchUpdateComponent
+					<MatchUpdateComponent
 						playerAScore={playerAScore}
 						playerBScore={playerBScore}
 						numberABtnClick={numberABtnClick}

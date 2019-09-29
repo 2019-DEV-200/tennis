@@ -1,18 +1,18 @@
 import React from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
-import { scoreBoard_Title, player_A, player_B } from '../constant/scoreBoard.constant';
+import { injectIntl } from 'react-intl';
 import { MainTitle, MainTable, TableHead, TableColumn } from './common.Styled';
 
 const ScoreBoardComponent = (props) => {
-	console.log('B value is', props.playerBScore);
+	const scoreBoard_Title = 'Match Score Board';
+	const player_A = 'Player A';
+	const Player_B = 'Player B';
 	return (
 		<React.Fragment>
-			<MainTitle>{props.intl.formatMessage({ id: scoreBoard_Title })}</MainTitle>
+			<MainTitle>{scoreBoard_Title}</MainTitle>
 			<MainTable>
-				<tr>
-					<TableHead>{props.intl.formatMessage({ id: player_A })}</TableHead>
-					<TableHead>{props.intl.formatMessage({ id: player_B })}</TableHead>
-				</tr>
+				<TableHead>{player_A}</TableHead>
+				<TableHead>{Player_B}</TableHead>
+
 				<tr>
 					<TableColumn>{props.playerAScore}</TableColumn>
 					<TableColumn>{props.playerBScore}</TableColumn>

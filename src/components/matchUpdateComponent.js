@@ -1,24 +1,19 @@
 import React from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
-import { gameStart, deuce, game_AWin, game_BWin } from '../constant/scoreBoard.constant';
+import { injectIntl } from 'react-intl';
 import { UpdateBannerDiv, UpdateBannerText } from './common.Styled';
 import { gameStatusValuated } from './scoreBoard.Util';
 
 class MatchUpdateComponent extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	checkGameStatus(playerAScore, playerBScore, numberABtnClick, numberBBtnClick) {
 		const gameStatusValue = gameStatusValuated(playerAScore, playerBScore, numberABtnClick, numberBBtnClick);
 		if (gameStatusValue === 'gameStart') {
-			return <FormattedMessage id={gameStart} />;
+			return 'Game Start';
 		} else if (gameStatusValue === 'deuce') {
-			return <FormattedMessage id={deuce} />;
+			return 'Deuce';
 		} else if (gameStatusValue === 'game_AWin') {
-			return <FormattedMessage id={game_AWin} />;
+			return 'Hurrey Player A win the game.';
 		} else if (gameStatusValue === 'game_BWin') {
-			return <FormattedMessage id={game_BWin} />;
+			return 'Hurrey Player B win the game.';
 		}
 	}
 

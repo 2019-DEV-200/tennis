@@ -1,5 +1,4 @@
 export function gameStatusValuated(playerAScore, playerBScore, numberABtnClick, numberBBtnClick) {
-	console.log('number');
 	if (numberABtnClick === 1 && numberBBtnClick === 1) {
 		return 'gameStart';
 	} else if (playerAScore === 40 && playerBScore === 40 && numberABtnClick >= 6 && numberBBtnClick === 4) {
