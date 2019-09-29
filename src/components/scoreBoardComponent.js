@@ -4,7 +4,7 @@ import { scoreBoard_Title, player_A, player_B } from '../constant/scoreBoard.con
 import { MainTitle, MainTable, TableHead, TableColumn } from './common.Styled';
 
 const ScoreBoardComponent = (props) => {
-	console.log('B value is', props.PlayerBScore);
+	console.log('B value is', props.playerBScore);
 	return (
 		<React.Fragment>
 			<MainTitle>{props.intl.formatMessage({ id: scoreBoard_Title })}</MainTitle>
@@ -14,8 +14,8 @@ const ScoreBoardComponent = (props) => {
 					<TableHead>{props.intl.formatMessage({ id: player_B })}</TableHead>
 				</tr>
 				<tr>
-					<TableColumn>{props.PlayerAScore}</TableColumn>
-					<TableColumn>{props.PlayerBScore}</TableColumn>
+					<TableColumn>{props.playerAScore}</TableColumn>
+					<TableColumn>{props.playerBScore}</TableColumn>
 				</tr>
 			</MainTable>
 		</React.Fragment>
