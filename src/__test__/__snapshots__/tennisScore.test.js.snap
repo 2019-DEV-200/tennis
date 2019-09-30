@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render miscellaneous container 1`] = `
+<div
+  className="sc-dnqmqq efPCuS"
+>
+  <h1
+    className="sc-bwzfXH eBfixS"
+  >
+    Match Score Board
+  </h1>
+  <table
+    className="sc-bxivhb fWOJJx"
+  >
+    <tbody>
+      <tr>
+        <th
+          className="sc-ifAKCX bliNJl"
+        >
+          Player A
+        </th>
+        <th
+          className="sc-ifAKCX bliNJl"
+        >
+          Player B
+        </th>
+      </tr>
+      <tr>
+        <td
+          className="sc-EHOje fxlDpa"
+        >
+          0
+        </td>
+        <td
+          className="sc-EHOje fxlDpa"
+        >
+          0
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button
+    className="sc-htoDjs isieRF sc-iwsKbI kVktMF redBtn"
+    disabled={false}
+    label="Player A"
+    onClick={[Function]}
+  >
+    <span>
+      Player A
+    </span>
+  </button>
+  <button
+    className="sc-htoDjs isieRF sc-gZMcBi fFtBOB greenBtn"
+    disabled={false}
+    label="Player B"
+    onClick={[Function]}
+  >
+    <span>
+      Player B
+    </span>
+  </button>
+  <div
+    className="sc-bZQynM bvcNwU"
+  >
+    <span
+      className="sc-gzVnrw hjRexa"
+    />
+    Game Start
+  </div>
+</div>
+`;

@@ -26,6 +26,18 @@ const CustomButton = styled.button`
 		&:active {
 			background-color: #b6b7b6;
 		}
+		${(props) =>
+			props.disabled &&
+			`
+    background: none repeat scroll 0 0;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+    color: #ccc;
+    border: 1px solid #ccc;    
+    `};
+	};
 	}
 
 	&.greenBtn {

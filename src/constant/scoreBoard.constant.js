@@ -16,3 +16,5 @@ export const game_BWin = 'Hurrey Player B win the game. ';
 export const player_A = 'Player A';
 export const player_B = 'Player B';
 export const gameStart = 'Game Start';
+export const advantage_A = 'Player A got advantage.';
+export const advantage_B = 'Player B got advantage.';
